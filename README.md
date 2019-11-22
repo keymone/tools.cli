@@ -50,6 +50,8 @@ are not ready to migrate to `parse-opts`.
 
 (def cli-options
   ;; An option with a required argument
+  ;; Note the `PORT` placeholder, it's required to tell tools.cli that
+  ;; a value is expected after the argument
   [["-p" "--port PORT" "Port number"
     :default 80
     :parse-fn #(Integer/parseInt %)
